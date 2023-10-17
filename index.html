@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Configuración de viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Título de la página -->
+    <title>Presupuesto</title>
+    <!-- Enlace a Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Enlace a estilos propios -->
+    <link href="styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <!-- Contenedor principal -->
+    <div class="container">
+        <!-- Fila principal -->
+        <div class="row">
+            <!-- Columna centrada -->
+            <div class="col-md-6 col-md-offset-3 text-center">
+                <h2 id="monthYear">Presupuesto de MES ANIO</h2>
+                <div id="totalBalance"><b>0.00</b></div>
+                <div id="totalIncome"><b>INGRESOS: 0.00</b></div>
+                <div id="totalExpense"><b>EGRESOS: 0.00</b></div>
+                <div id="totalPercentage" data-percentage="0">Porcentaje de Gastos:</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <!-- Columna para formulario de transacción -->
+            <div class="col-md-3 reduce-margin">
+                <!-- Título del formulario -->
+                <h3><b>Transacción</b></h3>
+                <select id="transactionType">
+                    <!-- Opción por defecto -->
+                    <option value="" disabled selected>Ingreso | Egreso</option>
+                    <option value="income">Ingreso</option>
+                    <option value="expense">Egreso</option>
+                </select>
+                <!-- Campo para descripción -->
+                <input type="text" id="description" placeholder="Descripción">
+                <input type="number" id="amount" placeholder="Monto">
+                <button onclick="addTransaction()">Agregar</button>
+            </div>
+
+
+
+            <div class="col-md-3 col-md-offset-6 reduce-margin">
+                <!-- Título de la sección de Detalles -->
+                <h3><b>Detalles</b></h3>
+                <!-- Pestañas para Ingresos y Egresos -->
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#incomeTab" data-toggle="tab">Ingresos</a></li>
+                    <li><a href="#expenseTab" data-toggle="tab">Egresos</a></li>
+                </ul>
+                <!-- Contenido de las pestañas -->
+                <div class="tab-content">
+                    <div id="incomeTab" class="tab-pane fade in active">
+                    </div>
+                    <div id="expenseTab" class="tab-pane fade">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,140 @@
+/* Estilos para el balance total */
+#totalBalance {
+    font-size: 24px;
+    color: #29313c;
+}
+
+/* Estilos para el total de ingresos */
+#totalIncome {
+    background-color: #29313c;
+    color: #ffffff;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el total de gastos */
+#totalExpense {
+    background-color: #ffffff;
+    color: #29313c;
+    padding: 10px;
+    border: 1px solid #29313c;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilos para el porcentaje total de gastos */
+#totalPercentage {
+    color: #29313c;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Estilos para agregar el porcentaje después del elemento #totalPercentage */
+#totalPercentage::after {
+    content: attr(data-percentage) "%";
+    background-color: #29313c;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Estilos para el elemento #monthYear */
+#monthYear {
+    color: #29313c;
+}
+
+/* Estilos comunes para los elementos #totalIncome y #totalExpense */
+#totalIncome,
+#totalExpense {
+    max-width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos para el selector de tipo de transacción */
+#transactionType {
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: gray;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4gMeEjUJQNTqOwAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAhElEQVQ4y2P4//8/AyWYYdC//5D/sQdGRgbGaGD5j0DMDAwMRg1mjsP4/1oqJmaG/x8MdI7P+P8MDAwMDPwMDDFME+Z//iwMDAyMbAwM/F8MDPzwYDAw8AUZBoZ//yAWYAHGAwMD/xkGhv8MDB7EGGZe/1oMjFwMDPzHMDAw8DEwEBjAB2HMOJ//GgxmTkYGhpHhmF/+JgZmjoaB4Z9RgYGHsYDzX8AAPTd5QMEeYftAAAAAElFTkSuQmCC');
+    background-position: 95% 50%;
+    background-repeat: no-repeat;
+}
+
+/* Estilos para los campos de descripción y monto */
+#description,
+#amount {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Estilos para los botones */
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: #29313c;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+/* Estilos para el botón cuando se pasa el cursor por encima */
+button:hover {
+    background-color: #1c2430;
+}
+
+/* Estilos para las pestañas activas */
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>a:focus {
+    background-color: #29313c;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+/* Estilos para las pestañas en estado normal */
+.nav-tabs>li>a {
+    background-color: #959798;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+/* Estilos para las pestañas cuando el cursor pasa por encima o cuando están enfocadas */
+.nav-tabs>li>a:hover,
+.nav-tabs>li>a:focus {
+    background-color: #15191f;
+    border: none;
+}
+
+/* Estilos para el contenido de cada pestaña */
+.tab-content>.tab-pane>div {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 5px 0;
+    color: #29313c;
+    font-weight: bold;
+}
+
+/* Estilos para reducir los márgenes */
+.reduce-margin {
+    margin-right: 25px;
+    margin-left: 190px;
+}
